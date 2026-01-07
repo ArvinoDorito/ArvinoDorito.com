@@ -4,7 +4,6 @@ import { Mdx } from "@/app/components/mdx";
 import { Header } from "./header";
 import "./mdx.css";
 import { ReportView } from "./view";
-import { Redis } from "@upstash/redis";
 
 export const dynamic = "force-static";
 
@@ -15,9 +14,6 @@ export async function generateStaticParams() {
     slug: project.slug,
   }));
 }
-
-import { Redis } from "@upstash/redis";
-const redis = Redis.fromEnv();
 
 <h1 className="animate-title">Project Name</h1>
 <Particles quantity={50} className="absolute -z-10" />
