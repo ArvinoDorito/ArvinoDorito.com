@@ -6,7 +6,8 @@ import "./mdx.css";
 import { ReportView } from "./view";
 import { Redis } from "@upstash/redis";
 
-export const revalidate = 60;
+export const dynamic = "force-static";
+
 
 type Props = {
   params: {
