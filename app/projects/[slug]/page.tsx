@@ -8,6 +8,20 @@ import { Redis } from "@upstash/redis";
 
 export const dynamic = "force-static";
 
+export async function generateStaticParams() {
+  const projects = await getProjects(); // returns all projects
+
+  return projects.map((project) => ({
+    slug: project.slug,
+  }));
+}
+
+import { Redis } from "@upstash/redis";
+const redis = Redis.fromEnv();
+
+<h1 className="animate-title">Project Name</h1>
+<Particles quantity={50} className="absolute -z-10" />
+
 
 type Props = {
   params: {
